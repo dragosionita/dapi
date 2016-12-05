@@ -1,0 +1,15 @@
+module.exports = {
+    api: {
+        domain: 'http://domain.com',
+
+        auth: {
+            overwrite_authentication: false,
+            type: 'bearer',
+            token: "yourtoken"
+        },
+    },
+
+    server: {
+        port: 5000
+    }
+};

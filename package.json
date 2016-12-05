@@ -1,0 +1,38 @@
+{
+  "name": "dApi",
+  "description": "Development API Proxy",
+  "version": "1.0.0",
+  "author": "Dragos Ionita <dragos@adoreme.com>",
+  "license": "MIT",
+  "keywords": [
+    "api",
+    "app",
+    "swagger"
+  ],
+  "dependencies": {
+    "express": "4.14.0",
+    "body-parser": "1.15.2",
+    "cors": "2.8.1",
+    "request": "2.79.0",
+    "multiparty": "4.1.2",
+    "colors": "1.1.2",
+    "jade": "1.11.0",
+    "yamljs": "0.2.8"
+  },
+  "devDependencies": {
+
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "files": [
+    "LICENSE",
+    "History.md",
+    "Readme.md",
+    "index.js",
+    "lib/"
+  ],
+  "scripts": {
+    "start": "node app/app.js"
+  }
+}

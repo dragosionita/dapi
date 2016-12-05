@@ -1,0 +1,141 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Jura', sans-serif;
+    background-color: #f5f5f5;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Jura', sans-serif;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+header img {
+    width: 50px;
+    height: 70px;
+    margin: 15px 20px;
+    float: left
+}
+
+header h1 {
+    float: left;
+    margin: 30px 0;
+}
+
+.container {
+    float: left;
+    clear: both;
+    width: 100%;
+
+    height: calc(100% - 190px);
+    overflow: hidden;
+}
+.yaml, .json {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 20px;
+}
+
+.yaml p.title, .json p.title {
+    font-weight: bold;
+    margin-top:0;
+}
+
+.json {
+    padding: 20px 20px 40px 0;
+}
+
+#jsonviewer, #yamlviewer {
+    height: 100%;
+    overflow: scroll;
+}
+
+#jsonviewer {
+    padding-bottom: 70px;
+    background-color: #282a36 !important;
+}
+
+.CodeMirror {
+    height: calc(100% - 30px) !important;
+}
+
+footer {
+    float: left;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: green;
+    float: left;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.err-text {
+    color: red;
+    margin: 6px;
+    font-weight: bold;
+}
+
+.info {
+    float: right;
+    background-color: #282a36;
+    margin: 15px 15px 0 0;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 125px;
+}
+
+.info p {
+    font-size: 12px;
+    margin: 0;
+    color: #fff;
+}
+
+.info p span {
+    color: #23A0DB;
+    display: table;
+    float: left;
+}
+.info p span.big {
+    width: 78px;
+}
+
+.info p.l {
+    font-size: 10px;
+    float: left;
+    width: 100%;
+}
+
+.info p.l span.url {
+    color: #fff;
+}
+
+.info p.l span.url.ghost {
+    color: yellow;
+}
+
+.info p.l span.method {
+    float: right;
+    width: 45px;
+    color: #31F031;
+}
+
+.info p.l span.code {
+    float: right;
+    width: 45px;
+    color: #bd93f9;
+}

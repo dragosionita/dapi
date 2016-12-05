@@ -1,0 +1,42 @@
+doctype
+html
+  head
+    title dAPI Configuration
+    script(src='/static/js/codemirror.js')
+    script(src='/static/js/yaml.min.js')
+    script(src='/static/js/yaml.js')
+    script(src='/static/js/json-formatter.js')
+    script(src='/static/js/dot.min.js')
+
+    link(rel='stylesheet', href='/static/css/codemirror.css')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Jura')
+    link(rel='stylesheet', href='/static/css/dracula.css')
+    link(rel='stylesheet', href='/static/css/main.css')
+  body
+    header
+      img(src='/static/dapi.svg')
+      h1 dAPI - Config
+      div.info#info-dash
+        p
+            span dAPI uptime:&nbsp;
+            |  00:00:00
+        p
+            span dAPI host:&nbsp;
+            | &nbsp;
+        p
+            span API host:&nbsp;
+            | &nbsp;
+        hr
+    .container
+      div.yaml
+        p.title Swagger config file (YAML):
+        div#yamlviewer
+            textarea.code#ycode= swaggerFile
+
+      div.json
+        p.title JSON result (JSON):
+        div#jsonviewer
+    footer
+      a(href='#') ~ dApi 2016 ~
+
+    script(src='/static/js/main.js')

@@ -1,0 +1,56 @@
+swagger: '2.0'
+info:
+  title: Test Swagger
+  description: Swagger description
+  version: "1.0.0"
+# the domain of the service
+host: domain.com
+# array of all schemes that your API supports
+schemes:
+  - http
+# will be prefixed to all paths
+basePath: /api/v1
+produces:
+  - application/json
+paths:
+  /books:
+    get:
+      summary: Listing Books
+      description: |
+        List all books
+      parameters:
+        - $ref: '#/parameters/pageParam'
+        - $ref: '#/parameters/filterParam'
+      tags:
+        - Fitting
+      responses:
+        200:
+          description: An array of books
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/FittingStyle'
+          examples:
+            application/json:
+              - id: 1
+                published_at: "2015-08-05T08:40:51.620Z"
+                name: "Book 1"
+                status: Pending
+
+              - id: 2
+                published_at: "2015-08-05T08:40:51.620Z"
+                name: "Book 2"
+                status: Pending
+parameters:
+  pageParam:
+    name: page
+    in: query
+    description: the offset and limit to be displayed.Ex:page=1,20
+    required: false
+    type: string
+  filterParam:
+    name: filter
+    in: query
+    description: filter criteria.Ex:filter=type::0;;product_type_id::Activewear
+    required: false
+    type: string
