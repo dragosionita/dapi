@@ -9,7 +9,22 @@ let utils = {
         keys.forEach(route => {
             var cleanedRoute = url.replace(dataJSON.basePath, "");
 
-            if (route === cleanedRoute) foundPath = dataJSON.paths[route];
+            // Start comparation
+            let splitedUrl = cleanedRoute.split('/');
+            let splitedRoute = route.split('/');
+
+            if (splitedUrl.length == splitedRoute.length) {
+
+                let allPartAreOk = true;
+
+                for (let i = 0; i < splitedRoute.length; i++) {
+                    if (splitedRoute[i] !== splitedUrl[i]) {
+                        if (splitedRoute[i].charAt(0) != '{') allPartAreOk = false;
+                    }
+                }
+
+                if (allPartAreOk) foundPath = dataJSON.paths[route];
+            }
         });
 
         callback(foundPath);
