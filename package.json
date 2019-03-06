@@ -20,7 +20,7 @@
     "yamljs": "0.2.8"
   },
   "devDependencies": {
-
+    "nodemon": "^1.18.10"
   },
   "engines": {
     "node": ">= 0.10.0"
@@ -33,6 +33,7 @@
     "lib/"
   ],
   "scripts": {
-    "start": "node app/app.js"
+    "start": "node app/app.js",
+    "watch": "nodemon --watch swagger.yaml app/app.js"
   }
 }
